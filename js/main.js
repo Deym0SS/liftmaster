@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuWrapper = document.querySelector('.mobile-menu-wrapper');
 
     // открыть форму
-    showFormBtn?.addEventListener('click', () => {
-        modalFormWrapper.classList.add('show');
-        header.classList.add('is-hidden');
-        document.body.style.overflow = 'hidden';
-        mobileMenuWrapper.style.display = 'none';
+    showFormBtn?.addEventListener('click', () => { 
+        modalFormWrapper.classList.add('show'); 
+        header.classList.add('is-hidden'); 
+        document.body.style.overflow = 'hidden'; 
+        mobileMenuWrapper.style.display = 'none'; 
     });
 
     // закрыть по клику на фон
@@ -33,6 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
     modalForm?.addEventListener('click', (e) => {
         e.stopPropagation();
     });
+
+    const modalCloseBtn = modalFormWrapper.querySelector('.modal-close');
+    modalCloseBtn?.addEventListener('click', closeForm);
 
     // единая функция закрытия
     function closeForm() {
@@ -159,57 +162,54 @@ nextBtn.addEventListener('click', () => {
     /* ===== Menu ===== */
     const toggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.nav');
-    const mobileMenu = document.getElementById('mobileMenu');
     const closeBtn = document.querySelector('.mobile-menu-close');
     const logo = document.querySelector('.logo');
 
-    const mobileMQ = window.matchMedia('(max-width: 767px)');
-    const mobileMQ2 = window.matchMedia('(max-width: 560px)')
+    const MOBILE_BREAKPOINT = 560;
 
+    /* helpers */
+    const isMobile = () => window.innerWidth <= MOBILE_BREAKPOINT;
+
+    const openMobileMenu = () => {
+        mobileMenuWrapper.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        toggle.style.display = 'none';
+        logo.style.display = 'none';
+    };
+
+    const closeMobileMenu = () => {
+        mobileMenuWrapper.classList.remove('active');
+        document.body.style.overflow = '';
+        toggle.style.display = '';
+        logo.style.display = '';
+    };
+
+    /* toggle button */
     toggle.addEventListener('click', () => {
-        if (mobileMQ.matches && mobileMQ2.matches) {
-            // 📱 МОБИЛКА — выезд справа
-            mobileMenuWrapper.classList.toggle('active');
-            toggle.style.display = 'none';
-            logo.style.display = 'none';
-
-            document.body.style.overflow =
-                mobileMenuWrapper.classList.contains('active')
-                    ? 'hidden'
-                    : '';
+        if (isMobile()) {
+            mobileMenuWrapper.classList.contains('active')
+                ? closeMobileMenu()
+                : openMobileMenu();
         } else {
-            // 📲 ПЛАНШЕТ / ДЕСКТОП — строка меню
             toggle.classList.toggle('is-open');
             nav.classList.toggle('is-open');
         }
     });
 
-    /* кнопка закрытия */
-    closeBtn.addEventListener('click', () => {
-        mobileMenuWrapper.classList.remove('active');
-        document.body.style.overflow = '';
-        toggle.style.display = '';
-        logo.style.display = '';
-    });
+    /* close button */
+    closeBtn.addEventListener('click', closeMobileMenu);
 
-    /* закрытие по клику на ссылку */
+    /* close on link click */
     document.querySelectorAll('.mobile-menu-nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenuWrapper.classList.remove('active');
-            document.body.style.overflow = '';
-            toggle.style.display = '';
-            logo.style.display = '';
-        });
+        link.addEventListener('click', closeMobileMenu);
     });
 
-    /* закрытие при ресайзе */
+    /* close on resize */
     window.addEventListener('resize', () => {
-        if (!mobileMQ.matches) {
-            mobileMenuWrapper.classList.remove('active');
-            document.body.style.overflow = '';
-            toggle.style.display = '';
-            logo.style.display = '';
+        if (!isMobile()) {
+            closeMobileMenu();
         }
     });
+
 
 });
