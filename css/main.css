@@ -244,6 +244,10 @@ input[type="number"] {
 
 /* Mobile menu */
 
+.mobile-menu-wrapper {
+    display: none;
+}
+
 .mobile-menu {
     padding: 24px;
     position: relative;
@@ -1658,11 +1662,10 @@ header.is-hidden {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* ===== MOBILE MENU SLIDE RIGHT ===== */
-
     .mobile-menu-wrapper {
+        display: block;
         position: fixed;
-        inset: 0;                /* top:0 right:0 bottom:0 left:0 */
+        inset: 0;
         width: 100vw;
         height: 100vh;
         z-index: 1000;
