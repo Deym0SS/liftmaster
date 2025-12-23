@@ -5,12 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const showFormBtn = document.getElementById('showFormBtn');
     const modalForm = document.getElementById('modalForm');
     const header = document.querySelector('header');
+    const mobileMenuWrapper = document.querySelector('.mobile-menu-wrapper');
 
     // открыть форму
     showFormBtn?.addEventListener('click', () => {
         modalFormWrapper.classList.add('show');
         header.classList.add('is-hidden');
         document.body.style.overflow = 'hidden';
+        mobileMenuWrapper.style.display = 'none';
     });
 
     // закрыть по клику на фон
@@ -37,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modalFormWrapper.classList.remove('show');
         header.classList.remove('is-hidden');
         document.body.style.overflow = '';
+        mobileMenuWrapper.style.display = '';
     }
 
     /* ================== BRANDS MARQUEE ================== */
@@ -156,7 +159,6 @@ nextBtn.addEventListener('click', () => {
     /* ===== Menu ===== */
     const toggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.nav');
-    const mobileMenuWrapper = document.querySelector('.mobile-menu-wrapper');
     const mobileMenu = document.getElementById('mobileMenu');
     const closeBtn = document.querySelector('.mobile-menu-close');
     const logo = document.querySelector('.logo');
@@ -211,4 +213,3 @@ nextBtn.addEventListener('click', () => {
     });
 
 });
-
