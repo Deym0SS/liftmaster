@@ -1320,7 +1320,7 @@ header.is-hidden {
     .nav {
         position: absolute;
         top: 50%;
-        left: 0;
+        left: -100px;
         background: #F5F6F7;
 
         padding: 10px 20px 10px 56px;
@@ -1334,7 +1334,7 @@ header.is-hidden {
     }
 
     .nav.is-open {
-        transform: translateX(0) translateY(-50%);
+        transform: translateX(100px) translateY(-50%);
         box-shadow: 0 0 28px rgba(0, 0, 0, 0.08);
     }
 
@@ -1742,5 +1742,6 @@ header.is-hidden {
     0% { transform: translateX(0); }
     100% { transform: translateX(-100%); }
 }
+
 
 
