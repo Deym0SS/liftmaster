@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lift Master</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Lift Master" />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="header" id="header"> 
+        <div class="container section-wrapper">
+            <a href="#header" class="logo logo-link"></a>
+            <button class="menu-toggle" aria-label="Меню">
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+            </button>
+            <nav class="nav">
+                <a href="#offer" class="nav-link active">Главная</a>
+                <a href="#about" class="nav-link">О компании</a>
+                <a href="#projects" class="nav-link">Проекты</a>
+                <a href="#reviews" class="nav-link">Отзывы</a>
+                <a href="#contacts" class="nav-link">Контакты</a>
+            </nav>
+            <a href="tel:+77718888563" class="header-phone">+7 (771) 888-85-63</a>
+            <div class="mobile-menu-wrapper">
+                <div class="mobile-menu" id="mobileMenu">
+                    <button class="mobile-menu-close" aria-label="Закрыть меню">✕</button>
+                    <span class="mobile-menu-span">Меню</span>
+                    <nav class="mobile-menu-nav">
+                        <a href="#offer" class="mobile-menu-nav-link">Главная</a>
+                        <a href="#about" class="mobile-menu-nav-link">О компании</a>
+                        <a href="#projects" class="mobile-menu-nav-link">Проекты</a>
+                        <a href="#reviews" class="mobile-menu-nav-link">Отзывы</a>
+                        <a href="#contacts" class="mobile-menu-nav-link">Контакты</a>
+                    </nav>
+                    <span class="mobile-menu-span">Свяжитесь с нами</span>
+                    <div class="mobile-menu-contacts">
+                        <a href="mailto:liftmasterkz@yandex.kz" class="mobile-menu-contacts-info">liftmasterkz@yandex.kz</a>
+                        <p class="mobile-menu-contacts-info">г.Алматы, 050040,</br>ул. Шашкина, 9В, н.п.22 </p>
+                        <a href="tel:+77718888563" class="mobile-menu-phone">+7 (771) 888-85-63</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main" id="main">
+        <section class="offer" id="offer">
+            <div class="container">
+                <span class="slogan">
+                    [ Технологии вертикального движения ]
+                </span>
+                <h1 class="offer-title">
+                    Лучшие решения для <span class="blue">безопасности</span> и долговечности <span class="blue">ваших лифтов</span>
+                </h1>
+                <p class="offer-intro">
+                    Мы обеспечиваем установку, обслуживание, ремонт и аудит лифтов, поставку оригинальных запчастей, а также решения для людей с ограниченной подвижностью.
+                </p>
+                <p class="cta-note secondary-text">
+                    Свяжитесь с нами — наши специалисты подберут оптимальное решение для вашего объекта.
+                </p>
+                <div class="offer-buttons">
+                    <button class="btn request-btn" id="showFormBtn">Оставить заявку</button>
+                    <a href="#projects" class="btn projects-btn">Наши проекты</a>
+                </div>
+                <div class="form-wrapper" id="modalFormWrapper">
+                    <form action="#" class="modal-form" id="modalForm">
+                        <div class="modal-form-wrapper">
+                            <h4 class="form-title">Оставьте заявку</h4>
+                            <span class="form-subtitle secondary-text">Мы свяжемся с вами в течение рабочего дня.</span>
+                            <label for="name">Имя</label>
+                            <input required type="text" placeholder="Введите имя..." name="name" id="name">
+                            <label for="name">Номер телефона</label>
+                            <input required ="number" placeholder="+7 (___) ___-__-__" name="phone" id="phone">
+                            <label for="message">Ваше сообщение</label>
+                            <textarea rows="8" name="message" id="message" placeholder="Введите ваше сообщение..."></textarea>
+                            <button type="submit" class="btn request-btn">Отправить заявку</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="about-title">О компании</h2>
+                <div class="about-wrapper">
+                    <ul class="about-list">
+                        <li class="about-item shadow">
+                            <h3 class="about-item-title">Кто мы?</h3>
+                            <p class="about-item-text">Компания Liftmaster работает на рынке лифтов и подъемных систем <b>более 15 лет.</b> Наш офис расположен в Алматы, и мы обслуживаем <b>объекты по всему Казахстану.</b> Мы ценим безопасность, качество и инновации — каждый наш проект сопровождается строгим контролем, а все работы выполняются <b>сертифицированными специалистами.</b></p>
+                        </li>
+                        <li class="about-item shadow">
+                            <h3 class="about-item-title">Наша миссия</h3>
+                            <p class="about-item-text">Продлевать срок службы лифтового оборудования, делая его безопасным и эффективным через <b></b> своевременный ремонт и замену ключевых узлов.</p>
+                        </li>
+                        <li class="about-item shadow">
+                            <h3 class="about-item-title">Наш подход</h3>
+                            <p class="about-item-text">Мы стремимся быть <b>надежным партнёром</b> для жилых комплексов, бизнес-центров,медицинских учреждений и социальных объектов. Ведь <b>лифт — это не просто подъемник,</b> это часть жизни людей.</p>
+                        </li>
+                        <li class="about-item about-item_documents shadow">
+                            <h3 class="about-item-title">Документы</h3>
+                            <span class="about-item-span secondary-text2">Государственная лицензия - <a href="#" class="about-item-link">Лицензия.pdf</a></span>
+                            <span class="about-item-span secondary-text2">Аттестат - <a href="#" class="about-item-link">Аттестат.pdf</a></span>
+                        </li>
+                    </ul>
+                    <img src="img/about-bg.jpg" alt="Шахта Лифта" class="about-image shadow">
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="container">
+                <h2 class="services-title">Наши услуги</h2>
+                <ul class="services-list">
+                    <li class="services-item shadow">
+                        <h3 class="services-item-title">Обслуживание лифтов</h3>
+                        <p class="services-item-text">
+                            Мы предоставляем регулярное профилактическое техническое обслуживание:
+                            плановые осмотры, диагностика узлов, смазка, проверка систем безопасности. Это
+                            позволяет избежать аварий, продлить срок
+                        </p>
+                    </li>
+                    <li class="services-item shadow">
+                        <h3 class="services-item-title">Ремонт оборудования</h3>
+                        <p class="services-item-text">
+                            Наши квалифицированные специалисты готовы оперативно устранить любые
+                            неисправности — от мелких поломок до капитального ремонта. Мы работаем с
+                            различными типами лифтов и подъемников, используем оригинальные детали,
+                            проводим тестирование после ремонта.
+                        </p>
+                    </li>
+                    <li class="services-item shadow">
+                        <h3 class="services-item-title">Поставка запасных частей</h3>
+                        <p class="services-item-text">
+                            Предлагаем широкий ассортимент оригинальных и сертифицированных запчастей
+                            для лифтов и подъемных систем: контроллеры, тросы, кнопки, направляющие и
+                            др. Все детали соответствуют нормативам безопасности и совместимы с вашим
+                            оборудованием.
+                        </p>
+                    </li>
+                    <li class="services-item shadow">
+                        <h3 class="services-item-title">Аудит лифтового оборудования</h3>
+                        <p class="services-item-text">
+                            Проводим технический аудит лифтового хозяйства: проверка состояния
+                            конструкций, анализ прошедших ремонтов, оценка соответствия нормативам,
+                            составление рекомендаций по профилактике и модернизации. Это позволяет
+                            выявить риски и составить план развития лифтовой инфраструктуры.
+                        </p>
+                    </li>
+                    <li class="services-item shadow">
+                        <h3 class="services-item-title">Инвалидные подъемники</h3>
+                        <p class="services-item-text">
+                            Разрабатываем и устанавливаем решения для людей с ограниченными
+                            возможностями: вертикальные платформы, наклонные подъемники, подъемники
+                            для санаториев и больниц. Обеспечиваем не только монтаж, но и полный сервис —
+                            техническое обслуживание, ремонт и поставку запасных частей.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <div class="container">
+                <h2 class="projects-title">Наши проекты</h2>
+                <span class="projects-subtitle secondary-text2">
+                    Реализуем решения для жилых, коммерческих и производственных объектов
+                </span>
+                <ul class="projects-list">
+                    <li class="projects-item">
+                        <a href="img/projects/project1.jpg" data-fancybox="projects" data-caption="Globus — Алматы · Многофункциональный комплекс">
+                            <img src="img/projects/project1.jpg" alt="Многофункциональный комплекс Globus" class="projects-item-image">
+                        </a>
+                        <h4 class="projects-item-title">Globus</h4>
+                        <span class="projects-item-subtitle">Алматы · Многофункциональный комплекс</span>
+                    </li>
+
+                    <li class="projects-item">
+                        <a href="img/projects/project2.jpg" data-fancybox="projects" data-caption="Esentai Apartments — Алматы · Жилые комплексы">
+                            <img src="img/projects/project2.jpg" alt="Жилые комплексы Esentai Apartments" class="projects-item-image">
+                        </a>
+                        <h4 class="projects-item-title">Esentai Apartments</h4>
+                        <span class="projects-item-subtitle">Алматы · Жилые комплексы</span>
+                    </li>
+
+                    <li class="projects-item">
+                        <a href="img/projects/project3.jpg" data-fancybox="projects" data-caption="Wellness Club LUXOR — Алматы · Спортивно-оздоровительный комплекс">
+                            <img src="img/projects/project3.jpg" alt="Спортивно-оздоровительный комплекс Wellness Club LUXOR" class="projects-item-image">
+                        </a>
+                        <h4 class="projects-item-title">Wellness Club LUXOR</h4>
+                        <span class="projects-item-subtitle">Алматы · Спортивно-оздоровительный комплекс</span>
+                    </li>
+
+                    <li class="projects-item">
+                        <a href="img/projects/project4.jpeg" data-fancybox="projects" data-caption="Головной офис Halyk Bank — Алматы · Офис">
+                            <img src="img/projects/project4.jpeg" alt="Головной офис Halyk Bank" class="projects-item-image">
+                        </a>
+                        <h4 class="projects-item-title">Головной офис Halyk Bank</h4>
+                        <span class="projects-item-subtitle">Алматы · Офис</span>
+                    </li>
+
+                    <li class="projects-item">
+                        <a href="img/projects/project5.jpg" data-fancybox="projects" data-caption="Банк ЦентрКредит — Алматы · Офис">
+                            <img src="img/projects/project5.jpg" alt="Банк ЦентрКредит" class="projects-item-image">
+                        </a>
+                        <h4 class="projects-item-title">Банк ЦентрКредит</h4>
+                        <span class="projects-item-subtitle">Алматы · Офис</span>
+                    </li>
+
+                    <li class="projects-item">
+                        <a href="img/projects/project6.jpg" data-fancybox="projects" data-caption="Головной офис Alatau City Bank — Алматы · Офис">
+                            <img src="img/projects/project6.jpg" alt="Головной офис Alatau City Bank" class="projects-item-image">
+                        </a>
+                        <h4 class="projects-item-title">Головной офис Alatau City Bank</h4>
+                        <span class="projects-item-subtitle">Алматы · Офис</span>
+                    </li>
+
+                    <li class="projects-item">
+                        <a href="img/projects/project7.jpg" data-fancybox="projects" data-caption="Филиал АО «Евразийский банк» — Алматы · Офис">
+                            <img src="img/projects/project7.jpg" alt="Филиал АО «Евразийский банк»" class="projects-item-image">
+                        </a>
+                        <h4 class="projects-item-title">Филиал АО «Евразийский банк»</h4>
+                        <span class="projects-item-subtitle">Алматы · Офис</span>
+                    </li>
+
+                    <li class="projects-item">
+                        <a href="img/projects/project8.jpg" data-fancybox="projects" data-caption="TOIMART — Алматы · Сеть супермаркетов">
+                            <img src="img/projects/project8.jpg" alt="Сеть супермаркетов TOIMART" class="projects-item-image">
+                        </a>
+                        <h4 class="projects-item-title">TOIMART</h4>
+                        <span class="projects-item-subtitle">Алматы · Сеть супермаркетов</span>
+                    </li>
+
+                    <li class="projects-item">
+                        <a href="img/projects/project10.jpg" data-fancybox="projects" data-caption="Haileybury Almaty British School — Алматы · Частная Британская школа">
+                            <img src="img/projects/project10.jpg" alt="Haileybury Almaty British School" class="projects-item-image">
+                        </a>
+                        <h4 class="projects-item-title">Haileybury Almaty British School</h4>
+                        <span class="projects-item-subtitle">Алматы · Частная Британская школа</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="brands">
+            <h2 class="visually-hidden">Бренды лифтового оборудования</h2>
+            <div class="brands-marquee shadow">
+                <ul class="brands-list">
+                    <li class="brands-item"><span class="brands-item-text">Otis</span></li>
+                    <li class="brands-item"><span class="brands-item-text">Kone</span></li>
+                    <li class="brands-item"><span class="brands-item-text">Schindler</span></li>
+                    <li class="brands-item"><span class="brands-item-text">Mitsubishi</span></li>
+                    <li class="brands-item"><span class="brands-item-text">Sigma IZAMET</span></li>
+                    <li class="brands-item"><span class="brands-item-text">SEC</span></li>
+                    <li class="brands-item"><span class="brands-item-text">ORONA</span></li>
+                    <li class="brands-item"><span class="brands-item-text">Hidral</span></li>
+                    <li class="brands-item"><span class="brands-item-text">DOPPLER</span></li>
+                    <li class="brands-item"><span class="brands-item-text">KLEEMANN</span></li>
+                    <li class="brands-item"><span class="brands-item-text">Wittur</span></li>
+                    <li class="brands-item"><span class="brands-item-text">LM</span></li>
+                    <li class="brands-item"><span class="brands-item-text">IGV</span></li>
+                    <li class="brands-item"><span class="brands-item-text">BLT</span></li>
+                    <li class="brands-item"><span class="brands-item-text">BKG</span></li>
+                    <li class="brands-item"><span class="brands-item-text">SKG</span></li>
+                    <li class="brands-item"><span class="brands-item-text">DIAO</span></li>
+                    <li class="brands-item"><span class="brands-item-text">EXPRESS</span></li>
+                    <li class="brands-item"><span class="brands-item-text">SJEC</span></li>
+                    <li class="brands-item"><span class="brands-item-text">ARKEL</span></li>
+                    <li class="brands-item"><span class="brands-item-text">XIZI</span></li>
+                    <li class="brands-item"><span class="brands-item-text">METRON</span></li>
+                    <li class="brands-item"><span class="brands-item-text">Macpuarsa</span></li>
+                    <li class="brands-item"><span class="brands-item-text">BRAVO ST</span></li>
+                    <li class="brands-item"><span class="brands-item-text">DMG</span></li>
+                    <li class="brands-item"><span class="brands-item-text">SIGMA</span></li>
+                    <li class="brands-item"><span class="brands-item-text">УЛ</span></li>
+                    <li class="brands-item"><span class="brands-item-text">УЭЛ</span></li>
+                    <li class="brands-item"><span class="brands-item-text">УМЛ</span></li>
+                    <li class="brands-item"><span class="brands-item-text">УКЛ</span></li>
+                    <li class="brands-item"><span class="brands-item-text">ШУЛ</span></li>
+                    <li class="brands-item"><span class="brands-item-text">УЛЖ</span></li>
+                    <li class="brands-item"><span class="brands-item-text">ШУЛК</span></li>
+                    <li class="brands-item"><span class="brands-item-text">ШУЛМ</span></li>
+                    <li class="brands-item"><span class="brands-item-text">ШЛ-Р</span></li>
+                    <li class="brands-item"><span class="brands-item-text">Олимп</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="certificates-and-partners" id="certificates-and-partners">
+            <div class="container">
+                <h2 class="certificates-and-partners-title">Наши сертификаты и партнеры </h2>
+                <div class="certificates-and-partners-wrapper">
+                    <div class="certificates shadow">
+                        <h3 class="certificates-title">Cертификаты</h3>
+                        <div class="swiper certificates-slider">
+                            <ul class="swiper-wrapper certificates-list">
+                                <li class="swiper-slide certificates-item vertical">
+                                    <a href="img/certificates/certificate1.jpg" data-fancybox="certificates">
+                                        <img src="img/certificates/certificate1.jpg" alt="Сертификат Liftmaster" class="certificates-item-image">
+                                    </a>
+                                </li>
+                                <li class="swiper-slide certificates-item vertical">
+                                    <a href="img/certificates/certificate2.jpg" data-fancybox="certificates">
+                                        <img src="img/certificates/certificate2.jpg" alt="Сертификат Liftmaster" class="certificates-item-image">
+                                    </a>
+                                </li>
+                                <li class="swiper-slide certificates-item vertical">
+                                    <a href="img/certificates/certificate3.jpg" data-fancybox="certificates">
+                                        <img src="img/certificates/certificate3.jpg" alt="Сертификат Liftmaster" class="certificates-item-image">
+                                    </a>
+                                </li>
+                                <li class="swiper-slide certificates-item vertical">
+                                    <a href="img/certificates/certificate4.jpg" data-fancybox="certificates">
+                                        <img src="img/certificates/certificate4.jpg" alt="Сертификат Liftmaster" class="certificates-item-image">
+                                    </a>
+                                </li>
+                                <li class="swiper-slide certificates-item vertical">
+                                    <a href="img/certificates/certificate5.jpg" data-fancybox="certificates">
+                                        <img src="img/certificates/certificate5.jpg" alt="Сертификат Liftmaster" class="certificates-item-image">
+                                    </a>
+                                </li>
+                                <li class="swiper-slide certificates-item vertical">
+                                    <a href="img/certificates/certificate6.jpg" data-fancybox="certificates">
+                                        <img src="img/certificates/certificate6.jpg" alt="Сертификат Liftmaster" class="certificates-item-image">
+                                    </a>
+                                </li>
+                                <li class="swiper-slide certificates-item vertical">
+                                    <a href="img/certificates/certificate7.jpg" data-fancybox="certificates">
+                                        <img src="img/certificates/certificate7.jpg" alt="Сертификат Liftmaster" class="certificates-item-image">
+                                    </a>
+                                </li>
+                                <li class="swiper-slide certificates-item vertical">
+                                    <a href="img/certificates/certificate8.jpg" data-fancybox="certificates">
+                                        <img src="img/certificates/certificate8.jpg" alt="Сертификат Liftmaster" class="certificates-item-image">
+                                    </a>
+                                </li>
+                                <li class="swiper-slide certificates-item vertical">
+                                    <a href="img/certificates/certificate9.jpg" data-fancybox="certificates">
+                                        <img src="img/certificates/certificate9.jpg" alt="Сертификат Liftmaster" class="certificates-item-image">
+                                    </a>
+                                </li>
+                                <li class="swiper-slide certificates-item vertical">
+                                    <a href="img/certificates/certificate10.jpg" data-fancybox="certificates">
+                                        <img src="img/certificates/certificate10.jpg" alt="Сертификат Liftmaster" class="certificates-item-image">
+                                    </a>
+                                </li>
+                                <li class="swiper-slide certificates-item horizontal">
+                                    <a href="img/certificates/certificate11.jpg" data-fancybox="certificates">
+                                        <img src="img/certificates/certificate11.jpg" alt="Сертификат Liftmaster" class="certificates-item-image">
+                                    </a>
+                                </li>
+                                <li class="swiper-slide certificates-item horizontal">
+                                    <a href="img/certificates/certificate12.jpg" data-fancybox="certificates">
+                                        <img src="img/certificates/certificate12.jpg" alt="Сертификат Liftmaster" class="certificates-item-image">
+                                    </a>
+                                </li>
+                                <li class="swiper-slide certificates-item horizontal">
+                                    <a href="img/certificates/certificate13.jpg" data-fancybox="certificates">
+                                        <img src="img/certificates/certificate13.jpg" alt="Сертификат Liftmaster" class="certificates-item-image">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="partners shadow">
+                        <h3 class="partners-title">Партнеры</h3>
+                        <ul class="partners-list">
+                            <li class="partners-item shadow"><img src="img/partners/partner1.png" alt="SEC" class="partners-item-image"></li>
+                            <li class="partners-item shadow"><img src="img/partners/partner2.png" alt="IFE" class="partners-item-image"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="advantages" id="advantages">
+            <div class="container">
+                <h2 class="advantages-title">Преимущества</h2>
+                <ul class="advantages-list">
+                    <li class="advantages-item shadow">
+                        <div class="advantages-item-wrapper">
+                            <h3 class="advantages-item-title">Сертифицированные специалисты</h3>
+                            <p class="advantages-item-text">Опыт работы 15+ лет, официальное обучение.</p>
+                        </div>
+                    </li>
+                    <li class="advantages-item shadow">
+                        <div class="advantages-item-wrapper">
+                            <h3 class="advantages-item-title">Быстрая реакция</h3>
+                            <p class="advantages-item-text">Оперативный выезд на заявки и аварии.</p>
+                        </div>
+                    </li>
+                    <li class="advantages-item shadow">
+                        <div class="advantages-item-wrapper">
+                            <h3 class="advantages-item-title">Оригинальные запчасти </h3>
+                            <p class="advantages-item-text">Только сертифицированные комплектующие.</p>
+                        </div>
+                    </li>
+                    <li class="advantages-item shadow">
+                        <div class="advantages-item-wrapper">
+                            <h3 class="advantages-item-title">Комплексный подход</h3>
+                            <p class="advantages-item-text">От аудита и ремонта до обслуживания и модернизации.</p>
+                        </div>
+                    </li>
+                    <li class="advantages-item shadow">
+                        <div class="advantages-item-wrapper">
+                            <h3 class="advantages-item-title">Индивидуальные решения</h3>
+                            <p class="advantages-item-text">Подъёмники, платформы и системы для людей с ОВЗ.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="reviews" id="reviews">
+            <div class="container">
+                <h2 class="reviews-title">Отзывы</h2>
+                <div class="reviews-content">
+                    <ul class="reviews-list">
+                        <li class="reviews-item shadow reviews-item-active">
+                            <div class="reviews-item-content">
+                                <div class="reviews-item-text-wrapper">
+                                    <h3 class="reviews-item-title">Рекомендательное письмо</h3>
+                                    <p class="reviews-item-text">
+                                        Настоящим КОМПАНИЯ ТОО «Управляющая компания «Marden Property» сообщает, что за время сотрудничества ТОО «Лифтмастер» зарекомендовало себя как надежная и профессиональная компания в сфере предоставления услуг в области технического обслуживания и ремонта грузоподъемного оборудования на наших объектах:
+                                    </p>
+                                    <ul class="reviews-item-list">
+                                        <li>Бизнес-центр «Стандарт (лифты марки SIGMA)</li>
+                                        <li>Бизнес-центр Алматинского Финансового Центра «Блок С» (лифты марки KONE)</li>
+                                        <li>Торговый центр «Car City» (лифты марки Могилев)</li>
+                                        <li>Бизнес-центр «Аврора» (лифты марки KONE)</li>
+                                        <li>Многофункциональный торговый центр «GLOBUS» (лифты и эскалаторы марки SIGMA)</li>
+                                    </ul>
+                                    <p class="reviews-item-text">
+                                        За время нашего сотрудничества ТОО «Лифтмастер» зарекомендовал себя надежным партнером, способным на высоком профессиональном и организационном уровне решать сложные и комплексные задачи. И у нас была возможность на практике убедиться, что ТОО «Лифтмастер» имеет достаточное техническое оснащение и квалифицированный персонал для проведения работ по техническому обслуживанию лифтов и эскалаторов, а также работ по капитальному и текущему ремонту для восстановления их работоспособности.
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        Ответственный подход, внимательное отношение к поставленным Задачам, проявленные знания и опыт, и понимание потребностей Заказчика все это позволяет ТОО «Лифтмастер» оказывать услуги на высоком уровне.
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        Со своей стороны готовы рекомендовать ТОО «Лифтмастер» другим заинтересованным лицам, как компанию, оказывающую услуги по техническому обслуживанию и ремонту грузоподъемного оборудования.
+                                    </p>
+                                </div>
+                                <button class="reviews-more" type="button">
+                                    Далее...
+                                </button>
+                            </div>
+                            <footer class="review-footer">
+                                <span class="reviews-item-span reviews-item-span-job-title">ТОО «Управляющая компания «Marden Property» Facility Директор</span>
+                                <span class="reviews-item-span reviews-item-span-name">Кондратьев Е.С.</span>
+                            </footer>
+                        </li>
+                        <li class="reviews-item shadow">
+                            <div class="reviews-item-content">
+                                <div class="reviews-item-text-wrapper">
+                                    <h3 class="reviews-item-title">Рекомендательное письмо</h3>
+                                    <p class="reviews-item-text">
+                                        С 2014 года и по настоящее время наша организация сотрудничает с ТОО “Лифтмастер”, которое оказывает нам услуги по техническому обслуживанию и освидетельствованию грузоподъемного оборудования, а именно лифтов, эскалаторов, траволаторов.
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        ТОО “Лифтмастер” проделал большой фронт работы по восставновлению и поддержанию в исправном состоянии грузоподъемных механизмов, согласно взятых на себя обязательств по договорам на техническое обслуживание оборудования, расположенных на объектах:
+                                    </p>
+                                    <ul class="reviews-item-list">
+                                        <li>МФК ESENTAI TOWER по адресу: г.Алматы, пр. Аль-Фараби 77/7</li>
+                                        <li>ТЦ ESENTAI MALL по адресу: г.Алматы, пр. Аль-Фараби 77/8</li>
+                                        <li>Школа “HaileyBury” по адресу: г.Алматы, пр. Аль-Фараби 112</li>
+                                    </ul>
+                                    <p class="reviews-item-text">
+                                        За время совместной работы ТОО “Лифтмастер” потвердило свой высокий профессиональный статус, компетентность и активность в решении поставленных задач. Все работы выполняются вовремя, в оговоренные сроки и с надлежащим качеством.
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        Мы рекомендуем ТОО “Лифтмастер” всем тем, кто заинтересован привести свое лифтовое хозяйство в порядок и для кого безопасность и надежность стоят на первом месте.
+                                    </p>
+                                </div>
+                                <button class="reviews-more" type="button">
+                                    Далее...
+                                </button>
+                            </div>
+                            
+                            <footer class="review-footer">
+                                <span class="reviews-item-span reviews-item-span-job-title">Предсетатель Правления ТОО “ANS-Service”</span>
+                                <span class="reviews-item-span reviews-item-span-name">Алфёрова Ю.Г.</span>
+                            </footer>
+                        </li>
+                        <li class="reviews-item shadow">
+                            <div class="reviews-item-content">
+                                <div class="reviews-item-text-wrapper">
+                                    <h3 class="reviews-item-title">Рекомендательное письмо</h3>
+                                    <p class="reviews-item-text">
+                                        С августа 2019 года и по настоящее время наша организация сотрудничает с ТОО «Лифтмастер», оказывающее услуги по техническому обслуживанию и освидетельствованию грузоподьемного оборудования, а именно лифтов марки SIGMA и OTIS, расположенных в БЦ "Prime Business Park" по адресу: г.Алматы, проспект Н.Назарбаева 100.
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        За время нашего сотрудничества ТОО «Лифтмастер» зарекомендовал себя как:
+                                    </p>
+                                    <ul class="reviews-item-list">
+                                        <li>надежный партнер, способный на высоком профессиональном и
+                                    организационном уровне решать сложные и комплексные задачи;</li>
+                                        <li>умеющим работать на опережение, а зачастую самостоятельно решающим вопросы по оптимизации расходов по ремонту лифтов своими силами и средствами, тем самым экономя средства заказчика;</li>
+                                        <li>обладающим достаточным материально-технической базой И квалифицированным персонал для проведения работ по техническому обслуживанию лифтов, а также работ по капитальному и текущему ремонту для восстановления их работоспособности.</li>
+                                    </ul>
+                                    <p class="reviews-item-text">
+                                        Также хотелось бы отметить, что ответственный подход, внимательное отношение к поставленным задачам, проявленные знания и опыт, и понимание потребностей Заказчика позволяет сказать, что ТОО «Лифтмастер» является одной из ведущей компании, оказывающей услуги на высоком уровне.
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        Со своей стороны рекомендуем ТОО «Лифтмастер» другим заинтересованным лицам, как высокопрофессиональную компанию, оказывающую услуги по техническому обслуживанию и ремонту грузоподъемного оборудования.
+                                    </p>
+                                </div>
+                                <button class="reviews-more" type="button">
+                                    Далее...
+                                </button>
+                            </div>
+                            <footer class="review-footer">
+                                <span class="reviews-item-span reviews-item-span-job-title">Операционный директор «TOO Lynks Property Management (Линкс Проперти Менеджмент)»</span>
+                                <span class="reviews-item-span reviews-item-span-name">Крылова А.В.</span>
+                            </footer>
+                        </li>
+                        <li class="reviews-item shadow">
+                            <div class="reviews-item-content">
+                                <div class="reviews-item-text-wrapper">
+                                    <h3 class="reviews-item-title">Рекомендательное письмо</h3>
+                                    <p class="reviews-item-text">
+                                        АО «Народный Банк Казахстана» учитывая положительный опыт, выражает благодарность и рекомендует ТОО «Лифтмастер» как надёжного и профессионального поставщика услуг в сфере обслуживания грузоподьёмного оборудования.
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        Сотрудничество с ТОО «Лифтмастер» продолжается с 2016 года. Компания обслуживает лифты и эскалаторы марок KONE и SIGMA в зданиях банка в г. Алматы.
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        За время работы специалисты ТОО зарекомендовали себя как квалифицированные, ответственные и оперативные исполнители.
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        Обслуживание выполняется качественно, с соблюдением всех требований безопасности.
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        ТОО «Лифтмастер» обеспечивает регулярные осмотры, быстро реагирует на внештатные ситуации и поддерживает оборудование в отличном техническом состоянии.
+                                    </p>
+                                </div>
+                                <button class="reviews-more" type="button">
+                                    Далее...
+                                </button>
+                            </div>
+                            <footer class="review-footer">
+                                <span class="reviews-item-span reviews-item-span-job-title">Директор Департамента ресурсов</span>
+                                <span class="reviews-item-span reviews-item-span-name">Жаксыкулов Н.Ж.</span>
+                            </footer>
+                        </li>
+                        <li class="reviews-item shadow">
+                            <div class="reviews-item-content">
+                                <div class="reviews-item-text-wrapper">
+                                    <h3 class="reviews-item-title">Рекомендательное письмо</h3>
+                                    <p class="reviews-item-text">
+                                        TOO «Mega Center Plus (Mera Центр Плюс)» желает успехов и новых достижений в профессиональной сфере!
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        Компания ТОО "Лифтмастер" в рамках сотрудничества с ТРЦ MEGA Park на протяжении многих лет, начиная с 2019 года, выполнила работы по техническому освидетельствованию вертикального транспорта, услуги по поставке тормозных колодок, а так же выполнила замену поручней и трудоемкий ремонт тяговых цепей ступеней эскалаторов.
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        Работы были выполнены профессионально, с соблюдением строгих технических требований производителя оборудования завода thyssenkrupp. Подрядчик внимательно отнесся к поставленным задачам, плодотворно взаимодействовал со специалистами ИТС и обслуживающей компанией. Поставка и монтаж были завершены в оговоренные сроки и выполнены надлежащим образом.
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        По итогам сотрудничества можем рекомендовать ТОО "Лифтмастер" как надежного исполнителя в области поставки, ремонта, монтажа лифтов и эскалаторов и обладающего практическим опытом предоставления услуг в сфере аудита и экспертизы грузоподъёмного оборудования.
+                                    </p>
+                                </div>
+                                <button class="reviews-more" type="button">
+                                    Далее...
+                                </button>
+                            </div>
+                            <footer class="review-footer">
+                                <span class="reviews-item-span reviews-item-span-job-title">Директор ТРЦ «MEGA Park»</span>
+                                <span class="reviews-item-span reviews-item-span-name">Еркимбаев А.Б.</span>
+                            </footer>
+                        </li>
+                        <li class="reviews-item shadow">
+                            <div class="reviews-item-content">
+                                <div class="reviews-item-text-wrapper">
+                                    <h3 class="reviews-item-title">Рекомендательное письмо</h3>
+                                    <p class="reviews-item-text">
+                                        С 2021 года и по настоящее время наша компания сотрудничает с ТОО «Лифтмастер», которое обслуживает грузоподьемное оборудование, а именно лифты на нашем объекте ОСИ "Резиденция Блока С Есентай Парк Алматы".
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        За время нашего сотрудничества ТОО «Лифтмастер» зарекомендовал себя надежным партнером, способным на высоком профессиональном и организационном уровне решать сложные и комплексные задачи. И у нас была возможность на практике убедиться, что ТОО «Лифтмастер» имеет достаточное техническое оснащение и квалифицированный персонал для проведения работ по техническому обслуживанию лифтов, а также работ по капитальному и текущему ремонту для восстановления их работоспособности.
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        Ответственный подход, внимательное отношение к поставленным задачам, проявленные знания и опыт, и понимание потребностей Заказчика все это позволяет ТОО «Лифтмастер» оказывать услуги на высоком уровне. Со своей стороны готовы рекомендовать ТОО «Лифтмастер» другим заинтересованным лицам, как компанию, оказывающую услуги по техническому обслуживанию и ремонту грузоподьемного оборудования.
+                                    </p>
+                                </div>
+                                <button class="reviews-more" type="button">
+                                    Далее...
+                                </button>
+                            </div>
+                            <footer class="review-footer">
+                                <span class="reviews-item-span reviews-item-span-job-title">Управляющая ОСИ Резиденция Блока С Есентай Парк Алматы</span>
+                                <span class="reviews-item-span reviews-item-span-name">Мукашева А.М.</span>
+                            </footer>
+                        </li>
+                        <li class="reviews-item shadow">
+                            <div class="reviews-item-content">
+                                <div class="reviews-item-text-wrapper">
+                                    <h3 class="reviews-item-title">Рекомендательное письмо</h3>
+                                    <p class="reviews-item-text">
+                                        В рамках нашего партнерства ТОО "Лифтмастер" осуществляет комплексное техническое обслуживание грузоподьемного оборудования - лифты, эскалаторы марки SIGMA - расположенных в МФК «Globus».
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        На протяжении всего периода сотрудничества ТОО "Лифтмастер" демонстрирует высочайшее качество выполнения работ, включая:
+                                    </p>
+                                    <ul class="reviews-item-list">
+                                        <li>Регулярные плановые осмотры и ежемесячное сервисное обслуживание, что позволяет поддерживать оборудование в безупречном техническом состоянии.</li>
+                                        <li>Быстрое реагирование на аварийные вызовы и оперативное устранение неисправностей, что минимизирует простои.</li>
+                                        <li>Компетентный и квалифицированный персонал, обладающий необходимыми знаниями для работы с современным грузоподьемным оборудованием разных марок.</li>
+                                        <li>Четкое соблюдение всех норм и правил безопасности при проведении работ.</li>
+                                    </ul>
+                                    <p class="reviews-item-text">
+                                        Благодаря профессионализму ТОО "Лифтмастер" мы уверены в надежности и безопасности эксплуатации нашего грузоподьемного оборудования.
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        С учетом нашего положительного опыта, мы без сомнений рекомендуем ТОО "Лифтмастер" как надежного и ответственного поставщика услуг по техническому обслуживанию грузоподьемного оборудования.
+                                    </p>
+                                </div>
+                                <button class="reviews-more" type="button">
+                                    Далее...
+                                </button>
+                            </div>
+                            <footer class="review-footer">
+                                <span class="reviews-item-span reviews-item-span-job-title">Главный инженер</span>
+                                <span class="reviews-item-span reviews-item-span-name">Баранцев А.И.</span>
+                            </footer>
+                        </li>
+                        <li class="reviews-item shadow">
+                            <div class="reviews-item-content">
+                                <div class="reviews-item-text-wrapper">
+                                    <h3 class="reviews-item-title">Рекомендательное письмо</h3>
+                                    <p class="reviews-item-text">
+                                        ТОО «Лифтмастер» является партнером ТОО «Компания Си Пи Ритэил Алматы» в области оказания услуг по техническому обслуживанию и ремонту грузоподъемного оборудования с 2016 года. 
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        В объем оказываемых услуг входят работы по следующему оборудованию:
+                                    </p>
+                                    <ul class="reviews-item-list">
+                                        <li>Лифты марки ThyssenKrupp (12 единиц)</li>
+                                        <li>Эскалаторы марки ThyssenKrupp (18 ед.)</li>
+                                        <li>Траволаторы марки ThyssenKrupp (6 ед.)</li>
+                                    </ul>
+                                    <p class="reviews-item-text">
+                                        За время сотрудничества ТОО «Лифтмастер» показало свою способность полной ответственностью подходить K поставленным задачам И обязательствам, выполнять работы качественно и в срок.
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        Отличительной чертой работы ТОО «Лифтмастер» является четкая организация процесса работы, гибкость, умение подстраиваться под сложный график и условия работы объекта, учитывая мнение и пожелания Заказчика.
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        Мы рекомендуем ТОО «Лифтмастер» как надежного и добросовестного партнера, как специализированную компанию для объектов с повышенными требованиями к качеству и условиям работы.
+                                    </p>
+                                </div>
+                                <button class="reviews-more" type="button">
+                                    Далее...
+                                </button>
+                            </div>
+                            <footer class="review-footer">
+                                <span class="reviews-item-span reviews-item-span-job-title">Технический директор ТОО «Компания «Си Пи Ритэил Алматы»</span>
+                                <span class="reviews-item-span reviews-item-span-name">Аккулов Б.Г.</span>
+                            </footer>
+                        </li>
+                        <li class="reviews-item shadow">
+                            <div class="reviews-item-content">
+                                <div class="reviews-item-text-wrapper">
+                                    <h3 class="reviews-item-title">Рекомендательное письмо</h3>
+                                    <p class="reviews-item-text">
+                                        TOO "Rent Investment Group" и ТОО «Лифтмастер» сотрудничают с 2021 года по настоящее время. ТОО «Лифтмастер» оказывает услуги по техническому обслуживанию и освидетельствованию грузоподъемного оборудования, а именно лифтов, расположенных в БЦ "Коктем" по адресу: г.Алматы, микрорайон Коктем-2.
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        За время нашего сотрудничества ТОО «Лифтмастер» зарекомендовал себя как надежного партнера, способного решать сложные и комплексные задачи на высоком профессиональном и организационном уровне. Также ТОО «Лифмастер» помогает оптимизировать расходы на содержание и поддержание лифтов в рабочем состоянии, что позволяет нам экономить средства.
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        И хотелось бы отметить, что ТОО «Лифмастер» обладает достаточной материально-технической базой и квалифицированным персонал для проведения работ по техническому обслуживанию лифтов, а также работ по капитальному и текущему ремонту для восстановления их работоспособности. А ответственный подход, внимательное отношение к поставленным задачам, проявленные знания и опыт, и понимание потребностей Заказчика позволяет сказать, что ТОО «Лифтмастер» является одной из ведущей компании, оказывающей услуги на высоком уровне.
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        Со своей стороны, рекомендуем ТОО «Лифтмастер» другим заинтересованным лицам, как высокопрофессиональную компанию, оказывающую услуги по техническому обслуживанию и ремонту грузоподьемного оборудования.
+                                    </p>
+                                </div>
+                                <button class="reviews-more" type="button">
+                                    Далее...
+                                </button>
+                            </div>
+                            <footer class="review-footer">
+                                <span class="reviews-item-span reviews-item-span-job-title">Генеральный директор TOO «Rent Investment Group»</span>
+                                <span class="reviews-item-span reviews-item-span-name">Мергалиев А.Р.</span>
+                            </footer>
+                        </li>
+                        <li class="reviews-item shadow">
+                            <div class="reviews-item-content">
+                                <div class="reviews-item-text-wrapper">
+                                    <h3 class="reviews-item-title">Рекомендательное письмо</h3>
+                                    <p class="reviews-item-text">
+                                        ТОО «Кэпитал Тауэр Девелопмент» сотрудничает с ТОО «Лифтмастер» с 2013 года по настоящее время. За данный период сотрудники ТОО «Лифтмастер» зарекомендовали себя как квалифицированные специалисты, умеющие грамотно и главное оперативно организовывать весь цикл работ. Работы выполняются качественно, с учетом мнения и пожеланий Заказчика.
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        ТОО «Лифтмастер» выполняет работы по ремонту и техническому обслуживанию грузоподьемного оборудования, а именно лифты марки KONE (15 единиц), автомобильная платформа Evanesco (2 ед.), фасадомоечная машина AESA 25 (2 ед.), лифт малогрузовой Schindler, находящегося в МФК «Esentai Tower».
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        Основываясь на нашем опыте сотрудничества, мы рекомендуем ТОО «Лифтмастер» в качестве надежного и добросовестного партнера всем тем, для кого безопасность и надежность стоят на первом месте при эксплуатации грузоподъемных механизмов.
+                                    </p>
+                                </div>
+                                <button class="reviews-more" type="button">
+                                    Далее...
+                                </button>
+                            </div>
+                            <footer class="review-footer">
+                                <span class="reviews-item-span reviews-item-span-job-title">Технический директор ТОО «Кэпитал Тауэр Девелопмент»</span>
+                                <span class="reviews-item-span reviews-item-span-name">Аккулов Б.Г.</span>
+                            </footer>
+                        </li>
+                        <li class="reviews-item shadow">
+                            <div class="reviews-item-content">
+                                <div class="reviews-item-text-wrapper">
+                                    <h3 class="reviews-item-title">Рекомендательное письмо</h3>
+                                    <p class="reviews-item-text">
+                                        ТОО «Лифтмастер» обслуживающий лифты гостиницы Ritz-Carlton Almaty предоставляет профессиональный и квалифицированный сервис.
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        Компания проявляет гибкость, постоянно подстраиваясь под сложный график и условия работы гостиницы, также предоставила лучших специалистов под руководством технического директора Гн. Шильникова В.Ю., тем самым подтвердив свою репутацию специализированного поставщика услуг для объектов с повышенными требованиями к качеству и сложным режимам работы.
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        Мы удовлетворены выполняемыми работами ТОО «Лифтмастер» и готовы рекомендовать как надежного и ответственного партнера.
+                                    </p>
+                                </div>
+                                 <button class="reviews-more" type="button">
+                                    Далее...
+                                </button>
+                            </div>
+                            <footer class="review-footer">
+                                <span class="reviews-item-span reviews-item-span-job-title">Директор Инжереной Службы Ritz-Carlton Almaty</span>
+                                <span class="reviews-item-span reviews-item-span-name">Оганес Оганян | Hovhannes Ohanyan</span>
+                            </footer>
+                        </li>
+                        <li class="reviews-item shadow">
+                            <div class="reviews-item-content">
+                                <div class="reviews-item-text-wrapper">
+                                    <h3 class="reviews-item-title">Рекомендательное письмо</h3>
+                                    <p class="reviews-item-text">
+                                        ТОО «Лифтмастер» оказывает услуги по техническому обслуживанию лифтового оборудования, находящегося в БЦ Алматинского Финансового Центра, по адресу: Алматы, пр. Аль-Фараби, д. 36/2, с 06 мая 2015 года по настоящее время.
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        За этот период ТОО «Лифтмастер» показало свою способность с высокой ответственностью подходить к поставленным задачам. Все работы всегда выполняются качественно и в срок. Высокий профессионализм специалистов ТОО «Лифтмастер», постоянное повышение уровня квалификации сотрудников, техническая оснащенность компании способствуют четкой и бесперебойной работе лифтов в здании нашего бизнес-центра. А соблюдение компанией договорных обязательств укрепляет доверие между нашими организациями и способствует нашему тесному взаимовыгодному сотрудничеству. 
+                                    </p>
+                                    <p class="reviews-item-text">
+                                        Мы очень ценим наше плодотворное сотрудничество и намерены продолжать его в будущем. Поэтому можем с уверенностью рекомендовать ТОО «Лифтмастер» как надежного партнера в сфере технического обслуживания и ремонта грузоподъемного оборудования.
+                                    </p>
+                                </div>
+                                <button class="reviews-more" type="button">
+                                    Далее...
+                                </button>
+                            </div>
+                            <footer class="review-footer">
+                                <span class="reviews-item-span reviews-item-span-job-title">Генеральный директор ТОО "АФБДИ"</span>
+                                <span class="reviews-item-span reviews-item-span-name">Ерназаров Б.Б.</span>
+                            </footer>
+                        </li>
+                    </ul>
+                    <div class="reviews-counter">
+                        <button class="counter-btn counter-prev" aria-label="Предыдущий отзыв">
+                            <img src="img/icons/arrow-left.svg" alt="Стрелка влево">
+                        </button>
+
+                        <span class="counter-text">
+                            <span id="currentReview">1</span>/<span id="totalReviews">12</span>
+                        </span>
+
+                        <button class="counter-btn counter-next" aria-label="Следующий отзыв">
+                            <img src="img/icons/arrow-right.svg" alt="Стрелка вправо">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contacts" id="contacts">
+            <div class="container">
+                <div class="contacts-wrapper">
+                    <div class="contacts-information">
+                        <h2 class="contacts-title">
+                            Контакты
+                        </h2>
+                        <span class="contacts-subtitle">
+                            Свяжитесь с нами, и мы подберём оптимальное решение под ваш объект.
+                        </span>
+                        <ul class="contacts-list">
+                            <li class="contacts-item">
+                                <span class="contacts-item-title">Адрес</span>
+                                <span class="contacts-item-info">г.Алматы, 050040, </br>ул. Шашкина, 9В, н.п.22 </span>
+                            </li>
+                            <li class="contacts-item">
+                                <span class="contacts-item-title">Телефон отдела сервиса:</span>
+                                <span class="contacts-item-info">+7 (771) 888-85-63</span>
+                            </li>
+                            <li class="contacts-item">
+                                <span class="contacts-item-title">Email</span>
+                                <span class="contacts-item-info">liftmasterkz@yandex.kz</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contacts-map">
+                        <iframe id="map_929249669" frameborder="0" width="100%" height="500px" src="https://makemap.2gis.ru/widget?data=eJw1jk1rwzAMhv-Ldg0ldlLnA3pZoaWX0sNgXUcPIdY2gxMZR4V1If99SrrpqOfVq2cEihYj2j1ShxwdDlC_j8D3gFDDDhu-RYQEQqSAkRc-QkueovCnVJfqQwtnx36-eNn7zm6fj2_nY3o5HzaCLA5tdIEd9RKQxc-ht_gNtUr_Z0rg8yFwn-v_vp_I9Sz5lkTS9Q0vcoVZVVmaZybJs5WWKaqr3DsLdZXr6ZpA14QTDe7xcATfMNRLVhVrbfK1qYoyS8DPeGlTRum8UiYtTCl6RJ3IGSkVcfL-9QvRX5YtxxtOv9I3XjU" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe>
+                    </div>
+                </div>
+                <form action="#" class="contacts-form">
+                    <div class="contacts-form-wrapper">
+                        <div class="contacts-form-left">
+                            <h4 class="form-title">Оставьте заявку</h4>
+                            <span class="form-subtitle secondary-text">Мы свяжемся с вами в течение рабочего дня.</span>
+                            <label for="name">Имя</label>
+                            <input required type="text" placeholder="Введите имя..." name="name" id="name">
+                            <label for="name">Номер телефона</label>
+                            <input required ="number" placeholder="+7 (___) ___-__-__" name="phone" id="phone">
+                        </div>
+                        <div class="contacts-form-right">
+                            <label for="message">Ваше сообщение</label>
+                            <textarea rows="8" name="message" id="message" placeholder="Введите ваше сообщение..." class="contacts-textarea"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn request-btn contacts-btn">Отправить заявку</button>
+                </form>
+            </div>
+        </section>        
+    </main>
+
+    <footer class="footer" id="footer">
+        <div class="container footer-wrapper">
+            <a href="#" class="footer-logo"></a>
+            <div class="footer-nav-wrapper">
+                <h4 class="footer-title">Навигация</h4>
+                <nav class="footer-nav">
+                    <a href="#offer" class="footer-nav-link">Главная</a>
+                    <a href="#about" class="footer-nav-link">О компании</a>
+                    <a href="#projects" class="footer-nav-link">Проекты</a>
+                    <a href="#reviews" class="footer-nav-link">Отзывы</a>
+                    <a href="#contacts" class="footer-nav-link">Контакты</a>
+                </nav>
+            </div>
+            <div class="footer-docs">
+                <h4 class="footer-title">Документы</h4>
+                <ul class="footer-docs-list">
+                    <li class="footer-docs-item">
+                        <span class="footer-docs-item-title">Государственная лицензия</span>
+                        <a href="#" class="footer-docs-item-link">лицензия.pdf</a>
+                    </li>
+                    <li class="footer-docs-item">
+                        <span class="footer-docs-item-title">Аттестат</span>
+                        <a href="#" class="footer-docs-item-link">аттестат.pdf</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-contacts">
+                <h4 class="footer-title">Контакты</h4>
+                <ul class="footer-contacts-list">
+                    <li class="footer-contacts-item">
+                        <span class="footer-contacts-item-title">Адрес</span>
+                        <span class="footer-contacts-item-info">г.Алматы, 050040, ул. Шашкина, 9В, н.п.22 </span>
+                    </li>
+                    <li class="footer-contacts-item">
+                        <span class="footer-contacts-item-title">Номер телефона</span>
+                        <span class="footer-contacts-item-info">+7 (771) 888-85-63</span>
+                    </li>
+                    <li class="footer-contacts-item">
+                        <span class="footer-contacts-item-title">Электронная почта</span>
+                        <span class="footer-contacts-item-info">liftmasterkz@yandex.kz</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
