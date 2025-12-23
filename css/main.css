@@ -446,6 +446,7 @@ header.is-hidden {
     background-size: cover;
     color: var(--light-color);
     padding: 80px 0;
+	background-color: var(--dark-color);
  }
 
  .slogan {
@@ -1741,4 +1742,5 @@ header.is-hidden {
     0% { transform: translateX(0); }
     100% { transform: translateX(-100%); }
 }
+
 
