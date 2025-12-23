@@ -519,6 +519,21 @@ header.is-hidden {
     pointer-events: auto;
 }
 
+.modal-form-wrapper {
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+}
+
 .modal-form {
     padding: 56px 80px;
     background-color: #0F172A;
