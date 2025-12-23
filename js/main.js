@@ -165,7 +165,7 @@ nextBtn.addEventListener('click', () => {
     const mobileMQ2 = window.matchMedia('(max-width: 560px)')
 
     toggle.addEventListener('click', () => {
-        if (mobileMQ.matches & mobileMQ2.matches) {
+        if (mobileMQ.matches && mobileMQ2.matches) {
             // 📱 МОБИЛКА — выезд справа
             mobileMenuWrapper.classList.toggle('active');
             toggle.style.display = 'none';
@@ -211,3 +211,4 @@ nextBtn.addEventListener('click', () => {
     });
 
 });
+
