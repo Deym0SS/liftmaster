@@ -1381,6 +1381,7 @@ header.is-hidden {
     .partners-list {
         flex-direction: row;
         gap: 20px;
+		align-items: stretch;
     }
 
     .partners-item:first-child {
@@ -1388,7 +1389,6 @@ header.is-hidden {
     }
 
     .partners-item {
-        height: -webkit-fill-available;
         display: flex;
         align-items: center;
     }
@@ -1742,6 +1742,7 @@ header.is-hidden {
     0% { transform: translateX(0); }
     100% { transform: translateX(-100%); }
 }
+
 
 
 
