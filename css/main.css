@@ -217,6 +217,7 @@ input[type="number"] {
     flex-direction: column;
     justify-content: center;
     gap: 8px;
+    transition: 3s ease;
 
     z-index: 1001;
 }
@@ -446,7 +447,7 @@ header.is-hidden {
     background-size: cover;
     color: var(--light-color);
     padding: 80px 0;
-	background-color: var(--dark-color);
+    background-color: var(--dark-color);
  }
 
  .slogan {
@@ -466,7 +467,7 @@ header.is-hidden {
 }
 
 .offer-intro {
-    width: 384px;
+    width: 530px;
     padding-bottom: 24px;
 }
 
@@ -575,9 +576,9 @@ header.is-hidden {
 /* about */
 
 .about-wrapper {
-    display: flex;
-    justify-content: space-between;
-    column-gap: 24px;
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    grid-column-gap: 24px;
 }
 
 .about-item, .services-item {
@@ -616,9 +617,22 @@ header.is-hidden {
     padding-bottom: 8px;
 }
 
+.about-item-text-list {
+    padding-top: 8px;
+}
+
+.about-item-text-list-item {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+}
+
+.about-item-text-list-item:not(:last-child) {
+    padding-bottom: 4px;
+}
+
 .about-image {
     width: 486px;
-    height: 824px;
+    height: -webkit-fill-available
 }
 
 .about-item-link {
@@ -1381,7 +1395,7 @@ header.is-hidden {
     .partners-list {
         flex-direction: row;
         gap: 20px;
-		align-items: stretch;
+        align-items: stretch;
     }
 
     .partners-item:first-child {
@@ -1742,8 +1756,4 @@ header.is-hidden {
     0% { transform: translateX(0); }
     100% { transform: translateX(-100%); }
 }
-
-
-
-
 
