@@ -174,6 +174,7 @@ nextBtn.addEventListener('click', () => {
         mobileMenuWrapper.classList.add('active');
         document.body.style.overflow = 'hidden';
         toggle.style.display = 'none';
+        toggle.style.opacity = '0';
         logo.style.display = 'none';
     };
 
@@ -181,6 +182,7 @@ nextBtn.addEventListener('click', () => {
         mobileMenuWrapper.classList.remove('active');
         document.body.style.overflow = '';
         toggle.style.display = '';
+        toggle.style.opacity = '1';
         logo.style.display = '';
     };
 
@@ -210,6 +212,85 @@ nextBtn.addEventListener('click', () => {
             closeMobileMenu();
         }
     });
+
+    /* ===== отправка форм ===== */
+    document.querySelectorAll('.js-form').forEach(form => {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch('send.php', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.text();
+
+                if (response.ok && result.trim() === 'OK') {
+                    alert('Заявка успешно отправлена!');
+                    form.reset();
+
+                    if (typeof closeForm === 'function') {
+                        closeForm();
+                    }
+                } else {
+                    alert('Ошибка отправки. Попробуйте позже.');
+                }
+            } catch (err) {
+                alert('Ошибка соединения с сервером');
+            }
+        });
+    });
+
+   document.querySelectorAll('.js-phone').forEach(input => {
+
+        input.addEventListener('focus', () => {
+            if (input.value === '') {
+                input.value = '+7 ';
+            }
+        });
+
+        input.addEventListener('input', () => {
+            let digits = input.value.replace(/\D/g, '');
+
+            // всегда начинаем с 7
+            if (digits[0] !== '7') {
+                digits = '7' + digits;
+            }
+
+            digits = digits.substring(0, 11); // +7 + 10 цифр
+
+            let formatted = '+7';
+
+            if (digits.length > 1) {
+                formatted += ' (' + digits.substring(1, 4);
+            }
+            if (digits.length >= 5) {
+                formatted += ') ' + digits.substring(4, 7);
+            }
+            if (digits.length >= 8) {
+                formatted += '-' + digits.substring(7, 9);
+            }
+            if (digits.length >= 10) {
+                formatted += '-' + digits.substring(9, 11);
+            }
+
+            input.value = formatted;
+        });
+
+        input.addEventListener('keydown', (e) => {
+            // запрещаем удалить "+7"
+            if ((e.key === 'Backspace' || e.key === 'Delete') && input.selectionStart <= 3) {
+                e.preventDefault();
+            }
+        });
+
+    });
+
+
+
 
 
 });
